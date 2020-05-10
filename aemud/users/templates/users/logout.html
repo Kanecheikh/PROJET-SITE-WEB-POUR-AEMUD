@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+
+{% block title %}
+    Profile
+{% endblock title %}
+
+{% block content %}
+    <h3>Déconnecté</h3>
+    <p>Merci pour le temps que vous avez accordé à ce site aujourd’hui.</p>
+    <a class="genric-btn link" href="{% url 'users-login' %}">Connectez-vous à nouveau</a> 
+
+
+{% endblock content %}
