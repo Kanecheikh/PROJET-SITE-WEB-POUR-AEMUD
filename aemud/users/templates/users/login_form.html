@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+
+{% block title %}
+    Connexion
+{% endblock title %}
+
+{% block content %}
+
+    <div class="mb-5">
+        <fieldset>
+            <legend>Connexion</legend>
+            <form class="form-contact contact_form" method="post">
+                {% csrf_token %}
+                {{ form|crispy }}
+                <div class="form-group mt-3">
+                <button type="submit" class="button button-contactForm boxed-btn">Se connecter</button>
+                </div>
+            </form>
+        </fieldset>
+    </div>
+{% endblock content %}
